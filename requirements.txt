@@ -1,7 +1,7 @@
 blinker==1.9.0
 click==8.2.1
 # Editable install with no version control (dailyCalc==1.0.0)
--e /home/reilly/calcApp
+#-e /home/reilly/calcApp
 Flask==3.1.1
 itsdangerous==2.2.0
 Jinja2==3.1.6
