@@ -3,7 +3,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: #303841;
+  color: #d3d6db;
 }
 
 .input-container {
@@ -22,28 +23,29 @@ body {
 }
 
 #add-todo {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  background-color: lightskyblue;
-  font-size: 1.5rem;
+  width: 90px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #be3144;
+  font-size: 1rem;
   border: none;
+  gap: 5px
   cursor: pointer;
 }
 
 .todo-container {
-  width: 500px;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 
 .todo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightsalmon;
-  border-radius: 10px;
+  background-color: #3a4750;
+  border-radius: 5px;
   font-size: 1.25rem;
 }
 
