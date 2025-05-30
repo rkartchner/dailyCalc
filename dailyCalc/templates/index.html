@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Calc Problems</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }} ">
+</head>
+
+<body>
+    <h1>Daily Calc Problems</h1>
+        <div class="todo-container">
+        {% for item in items %}
+            <div class="todo">
+                <p>{{ item.name }}</p>
+                <div class="actions">
+                    <form action="{{ url_for('views.checked_todo', todo_id=item.id) }}" method="POST">
+                        <input type="checkbox" {% if item.checked %}checked{% endif %} onchange="this.form.submit()">
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    
+    
+    <form action="{{ url_for('views.add_more_work') }}"class="input-container" method="POST">
+        <button id="add-todo" type="submit" name="todo_name">More Calculus</button>
+    </form>
+
+
+    <div class="modal-background">
+        <div class=" modal">
+            <div class="modal-top">
+                <h1>Edit Todo</h1>
+                <span class="close-modal" id="close-modal">&#x2715;</span>
+            </div>
+            <form class="modal-bottom">
+                <input type="text" id="edit-todo-name" placeholder="Todo Name">
+                <div id="edit-todo-completed-wrapper">
+                    <input type="checkbox" id="edit-todo-completed"> Completed
+                </div>
+                <button id="save-todo">Save</button>
+            </form>
+        </div>
+    </div>>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+[project]
+name = "dailyCalc"
+version = "1.0.0"
+description = "Web app that assigns problems from Stewart's Calculus"
+dependencies = [
+    "flask",
+]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"

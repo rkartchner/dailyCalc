@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS exercises;
+
+CREATE TABLE exercises (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  exercisenumber TEXT UNIQUE NOT NULL,
+  checked_on DATE NOT NULL
+);
